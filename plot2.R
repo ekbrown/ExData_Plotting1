@@ -15,6 +15,7 @@ elec <- fread("household_power_consumption.txt", sep = ";", na.strings = "?")
 
 # subsets data to two days in Feb 2007, combines Date and Time, and changes date_time to time class
 library("dplyr")
+library("lubridate")
 elec <- 
   elec %>% 
   filter(Date %in% c("1/2/2007", "2/2/2007")) %>% 
